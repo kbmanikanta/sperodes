@@ -23,12 +23,13 @@ $(function(){
 	);
 	
 	$(".box").click(function(){
-		$("#sidepanel").slideUp();
+		//$("#sidepanel").slideUp();
+		$(".test").not($(this).parent()).slideUp();
 	});
 	
 	
 	$("#home").click(function(){
-		$("#sidepanel").slideDown();
+		$(".test").slideDown();
 	});
 });
 </script>
