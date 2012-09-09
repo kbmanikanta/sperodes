@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title></title>
+
+<link rel="stylesheet" type="text/css" href="css/main.css" />
+<link rel="stylesheet" type="text/css" href="jqueryui/css/trontastic/jquery-ui-1.8.23.custom.css" />
+<script type="text/javascript" src="jqueryui/js/jquery-1.8.0.min.js"></script>
+<script type="text/javascript" src="jqueryui/js/jquery-ui-1.8.23.custom.min.js"></script>
+
+<script>
+$(function(){
+	$(".box").hover(function(){
+		$(this).fadeIn('slow').after("<div class='title'>About us</div>");
+	},function(){
+		$(this).next(".title").fadeOut('slow');
+	});
+});
+</script>
+
+</head>
+<body>
+	<div id="sidepanel">
+		<div class="test">
+			<div class="box">
+				<img src="imgs/pencil.png" alt="" >
+			</div>
+		</div>
+		
+		<div class="test">
+			<div class="box">
+				<img src="imgs/icon.png" alt="" >
+			</div>
+		</div>
+	</div>
+</body>
+</html>
