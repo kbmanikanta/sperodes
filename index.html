@@ -14,19 +14,43 @@ $(function(){
 	$(".box").hover(
 		function(){
 			/*$(this).next().removeClass('inactive_title').fadeIn(3000);*/
-			$(this).next().animate({opacity:1,width:100},500,function(){});
+			$(this).next().animate({opacity:1,width:100},100,function(){});
 			
 		},function(){
-			$(this).next().animate({opacity:0,width:0},500,function(){});
+			$(this).next().animate({opacity:0,width:0},100,function(){});
 			/*$(this).next().addClass('inactive_title').fadeOut(3000);*/
 		}
 	);
+	
+	$(".box").click(function(){
+		$("#sidepanel").slideUp();
+	});
+	
+	
+	$("#home").click(function(){
+		$("#sidepanel").slideDown();
+	});
 });
 </script>
 
 </head>
 <body>
 	<div id="sidepanel">
+
+		<div class="test">
+			<div class="box">
+				<img src="imgs/pencil.png" alt="" >
+			</div>
+			<div class="title">Home</div>
+		</div>
+		
+		<div class="test">
+			<div class="box">
+				<img src="imgs/icon.png" alt="" >
+			</div>
+			<div class="title">About</div>
+		</div>
+
 		<div class="test">
 			<div class="box">
 				<img src="imgs/pencil.png" alt="" >
@@ -41,5 +65,6 @@ $(function(){
 			<div class="title">About</div>
 		</div>
 	</div>
+	<button id="home">Home</button>
 </body>
 </html>
