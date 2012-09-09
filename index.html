@@ -11,11 +11,16 @@
 
 <script>
 $(function(){
-	$(".box").hover(function(){
-		$(this).fadeIn('slow').after("<div class='title'>About us</div>");
-	},function(){
-		$(this).next(".title").fadeOut('slow');
-	});
+	$(".box").hover(
+		function(){
+			/*$(this).next().removeClass('inactive_title').fadeIn(3000);*/
+			$(this).next().animate({opacity:1,width:100},500,function(){});
+			
+		},function(){
+			$(this).next().animate({opacity:0,width:0},500,function(){});
+			/*$(this).next().addClass('inactive_title').fadeOut(3000);*/
+		}
+	);
 });
 </script>
 
@@ -26,12 +31,14 @@ $(function(){
 			<div class="box">
 				<img src="imgs/pencil.png" alt="" >
 			</div>
+			<div class="title">Home</div>
 		</div>
 		
 		<div class="test">
 			<div class="box">
 				<img src="imgs/icon.png" alt="" >
 			</div>
+			<div class="title">About</div>
 		</div>
 	</div>
 </body>
